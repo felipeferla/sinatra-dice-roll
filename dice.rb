@@ -1,8 +1,5 @@
 require "sinatra"
 require "sinatra/reloader"
-get("/") do "Hello World" end
-get("/zebra") do "Hello There" end
-get("/car") do "It worked!" end
 
 get("/dice/2/6") do
   first_die = rand(1..6)
@@ -22,4 +19,9 @@ get("/dice/2/10") do
   "<h1> 2/10 </h1>
 
 <p> #{outcome} </p>"
+end
+
+get("/") do 
+  two_six_dice_url  = "https://ubiquitous-garbanzo-pj76g7jrgp7qc7q57-4567.app.github.dev/dice/2/6" 
+ "<a href= '#{two_six_dice_url}'> Roll two 6-sided dice </a>"
 end
