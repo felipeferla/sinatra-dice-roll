@@ -26,7 +26,8 @@ get("/dice/2/10") do
 <p> #{outcome} </p>"
 end
 
-get("/") do 
-  two_six_dice_url  = "https://ubiquitous-garbanzo-pj76g7jrgp7qc7q57-4567.app.github.dev/dice/2/6" 
- "<a href= '#{two_six_dice_url}'> Roll two 6-sided dice </a>"
+get("/") do  
+  
+  erb(:elephant)
+
 end
