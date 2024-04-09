@@ -6,6 +6,12 @@ use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
+get("/") do  
+
+  erb(:home_page)
+
+end
+
 get("/dice/2/6") do
   first_die = rand(1..6)
   second_die = rand(1..6)
@@ -24,11 +30,5 @@ get("/dice/2/10") do
   "<h1> 2/10 </h1>
 
 <p> #{outcome} </p>"
-
-end
-
-get("/") do  
-
-  erb(:elephant)
 
 end
